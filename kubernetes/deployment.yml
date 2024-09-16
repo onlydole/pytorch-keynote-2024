@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: symphony
-          image: your-image-name:tag # Replace with your actual image name and tag
+          image: ghcr.io/onlydole/pytorch-keynote-2024/symphony:latest
           ports:
             - containerPort: 5000
           env:
