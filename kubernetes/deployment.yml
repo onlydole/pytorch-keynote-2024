@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: symphony
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: symphony
+  template:
+    metadata:
+      labels:
+        app: symphony
+    spec:
+      containers:
+        - name: symphony
+          image: your-image-name:tag # Replace with your actual image name and tag
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_ENV
+              value: development
