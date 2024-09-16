@@ -1,5 +1,5 @@
 # Build stage for React app
-FROM node:14 as build-stage
+FROM node:lts-bullseye as build-stage
 
 WORKDIR /app
 COPY package*.json ./
@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM python:3.8
+FROM python:3.12-bullseye
 
 WORKDIR /app
 
