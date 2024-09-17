@@ -15,6 +15,7 @@ spec:
       containers:
         - name: symphony
           image: ghcr.io/onlydole/pytorch-keynote-2024/symphony:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
           env:
