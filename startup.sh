@@ -3,7 +3,7 @@
 echo "Create the kind cluster..."
 kind create cluster --config cluster.yml
 
-kind load docker-image ghcr.io/onlydole/pytorch-keynote-2024/symphony:latest
+kind load docker-image -n pytorch ghcr.io/onlydole/pytorch-keynote-2024/symphony:latest
 
 echo "Applying the Kubernets manifests..."
 kubectl apply -f kubernetes/deployment.yml
