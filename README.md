@@ -55,10 +55,10 @@ This cloud native, open source project showcases the power of machine learning i
 
 ### Kubernetes Deployment
 
-1. If you don't have a Kubernetes cluster, you can use Kind to create one locally:
+1. If you don't have a Kubernetes cluster, you can use [Kind](https://kind.sigs.k8s.io/) to create one locally:
 
    ```sh
-   kind create cluster --name pytorch-music
+   kind create cluster --config cluster.yml
    ```
 
 2. Apply the Kubernetes configurations:
